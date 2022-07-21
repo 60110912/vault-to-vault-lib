@@ -79,10 +79,16 @@ if __name__ == "__main__":
 - Пользователь сам определяет как будет происходить доступ к данным.
 - Можно написать свою обработку линковки в хранилищу, под капотом которой будет не только Vault.
 
+
+
 Для валидации LinkToVault написан модуль проверки check_vault_to_vault_config.py. Пример вызова:
 ```bash
 python check_vault_to_vault_config.py --config link_spec_approle.json
 ```
+
+Концептуальная схема использования для проекта может быть такой:
+![image info](img/vault_concept.png)
+
 
 
 **Links**:
