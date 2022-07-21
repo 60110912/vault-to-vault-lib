@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+
+  vault:
+    image: vault:1.11.0
+    container_name: vault
+    volumes:
+      - ./config:/vault/config
+      - ./policies:/vault/policies
+      # - ./data:/vault/data
+    ports:
+      - 8200:8200
+    environment:
+      - VAULT_DEV_ROOT_TOKEN_ID=dev-only-token
+      - VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:8200
+    cap_add:
+      - IPC_LOCK
+    command: "vault server -dev"

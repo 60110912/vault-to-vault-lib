@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+hvac = "==0.11.2"
+jsonschema = "*"
+dacite = "==0.0.13"
+pyyaml = "*"
+click = "*"
+
+[dev-packages]
+ipykernel = "*"
+
+[requires]
+python_version = "3.6"
